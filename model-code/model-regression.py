@@ -320,7 +320,7 @@ print(model.summary())
 
 # Save the weights using the `checkpoint_path` format
 # model.load_weights('./gdrive/MyDrive/model/g4nn-cnn-2.h5')
-# model.save_weights(checkpoint_path.format(epoch=0))
+model.save_weights(checkpoint_path.format(epoch=0))
 
 history = model.fit(x_train, y_train, epochs=5, batch_size=40, shuffle=True, callbacks=[cp_callback], validation_split=0.2)
 
